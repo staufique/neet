@@ -12,9 +12,9 @@ class College_CourseView(Resource):
     
     def post(self):
         college_code2= request.json['college_code2']
-        course_name=request.json['college_code2']
-        category=request.json['college_code2']
-        no_of_seats=request.json['college_code2']
+        course_name=request.json['course_name']
+        category=request.json['category']
+        no_of_seats=request.json['no_of_seats']
 
         data = College_Course(college_code2=college_code2,course_name=course_name,category=category,no_of_seats=no_of_seats)
         db.session.add(data)
